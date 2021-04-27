@@ -1,6 +1,51 @@
 import "./App.scss";
+import React, { useState } from "react";
+import "react-circular-progressbar/dist/styles.css";
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import Form1 from "./components/Form1";
+import Form2 from "./components/Form2";
+import Form3 from "./components/Form3";
+
+//import csgoSrc from "./images/games/csgo.png";
 
 function App() {
+  const [step, setStep] = useState(1);
+  const [progress, setProgress] = useState(0);
+
+  console.log("render");
+  const renderForm = (step) => {
+    switch (step) {
+      case 1:
+        return (
+          <Form1
+            setStep={setStep}
+            setProgress={setProgress}
+            previous={0}
+            next={25}
+          />
+        );
+      case 2:
+        return (
+          <Form2
+            setStep={setStep}
+            setProgress={setProgress}
+            previous={25}
+            next={50}
+          />
+        );
+      case 3:
+        return (
+          <Form3
+            setStep={setStep}
+            setProgress={setProgress}
+            previous={50}
+            next={100}
+          />
+        );
+      default:
+        return <Form1 setStep={setStep} setProgress={setProgress} />;
+    }
+  };
   return (
     <div className="App">
       <header className="App-header">
@@ -9,97 +54,25 @@ function App() {
           <br />
           <span className="outline">IN ESPORTS ATHELTES</span>
         </h2>
-        <div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="1279.218"
-            height="272.398"
-            viewBox="0 0 1279.218 272.398"
-            className="anime"
-          >
-            <g transform="translate(1047.457 0.001)">
-              <g className="letter">
-                <path
-                  d="M48.417,46.653s-.259,118.891-.259,177.583H203.167c9.03,0,18.059,3.01,22.574,12.04,9.03,15.049,0,34.614-18.059,36.119H40.633c-13.544,0-25.584-4.515-34.614-16.554C3.01,248.316,0,240.791,0,231.761V37.624C0,18.059,16.554,0,37.624,0H207.682c12.04,0,22.574,10.535,24.079,22.574,0,13.544-9.03,24.079-21.069,24.079H48.417Z"
-                  fill="currentColor"
-                />
-                <path
-                  d="M50.253,54.153H24.669C12.63,54.153,3.6,42.114,3.6,30.074S14.135,7.5,26.174,7.5H74.332c12.04,0,22.574,10.535,22.574,22.574A24.33,24.33,0,0,1,75.837,54.153Z"
-                  transform="translate(50.578 105.371)"
-                  fill="currentColor"
-                />
-              </g>
-              <g className="group group1">
-                <path
-                  d="M-302.513-1272.2H-400.75c-12.039,0-21.069-12.04-21.069-24.079s10.535-22.575,22.574-22.575h120.812c12.04,0,22.575,10.535,22.575,22.575a24.331,24.331,0,0,1-21.07,24.079Z"
-                  transform="translate(135.343 1431.724)"
-                  fill="currentColor"
-                />
-                <path
-                  d="M-302.513-1272.2H-400.75c-12.039,0-21.069-12.04-21.069-24.079s10.535-22.575,22.574-22.575h120.812c12.04,0,22.575,10.535,22.575,22.575a24.331,24.331,0,0,1-21.07,24.079Z"
-                  transform="translate(52.363 1544.594)"
-                  fill="currentColor"
-                />
-                <path
-                  d="M-302.513-1272.2H-400.75c-12.039,0-21.069-12.04-21.069-24.079s10.535-22.575,22.574-22.575h120.812c12.04,0,22.575,10.535,22.575,22.575a24.331,24.331,0,0,1-21.07,24.079Z"
-                  transform="translate(52.363 1318.853)"
-                  fill="currentColor"
-                />
-              </g>
-              <g className="group group3">
-                <path
-                  d="M-302.513-1272.2H-400.75c-12.039,0-21.069-12.04-21.069-24.079s10.535-22.575,22.574-22.575h120.812c12.04,0,22.575,10.535,22.575,22.575a24.331,24.331,0,0,1-21.07,24.079Z"
-                  transform="translate(-315.657 1431.725)"
-                  fill="currentColor"
-                />
-                <path
-                  d="M-302.513-1272.2H-400.75c-12.039,0-21.069-12.04-21.069-24.079s10.535-22.575,22.574-22.575h120.812c12.04,0,22.575,10.535,22.575,22.575a24.331,24.331,0,0,1-21.07,24.079Z"
-                  transform="translate(-398.637 1544.595)"
-                  fill="currentColor"
-                />
-                <path
-                  d="M-302.513-1272.2H-400.75c-12.039,0-21.069-12.04-21.069-24.079s10.535-22.575,22.574-22.575h120.812c12.04,0,22.575,10.535,22.575,22.575a24.331,24.331,0,0,1-21.07,24.079Z"
-                  transform="translate(-398.637 1318.854)"
-                  fill="currentColor"
-                />
-              </g>
-              <g className="group group2">
-                <path
-                  d="M-302.513-1272.2H-400.75c-12.039,0-21.069-12.04-21.069-24.079s10.535-22.575,22.574-22.575h120.812c12.04,0,22.575,10.535,22.575,22.575a24.331,24.331,0,0,1-21.07,24.079Z"
-                  transform="translate(-91.657 1431.723)"
-                  fill="currentColor"
-                />
-                <path
-                  d="M-302.513-1272.2H-400.75c-12.039,0-21.069-12.04-21.069-24.079s10.535-22.575,22.574-22.575h120.812c12.04,0,22.575,10.535,22.575,22.575a24.331,24.331,0,0,1-21.07,24.079Z"
-                  transform="translate(-174.637 1544.594)"
-                  fill="currentColor"
-                />
-                <path
-                  d="M-302.513-1272.2H-400.75c-12.039,0-21.069-12.04-21.069-24.079s10.535-22.575,22.574-22.575h120.812c12.04,0,22.575,10.535,22.575,22.575a24.331,24.331,0,0,1-21.07,24.079Z"
-                  transform="translate(-174.637 1318.852)"
-                  fill="currentColor"
-                />
-              </g>
-              <g className="group group4">
-                <path
-                  d="M-302.513-1272.2H-400.75c-12.039,0-21.069-12.04-21.069-24.079s10.535-22.575,22.574-22.575h120.812c12.04,0,22.575,10.535,22.575,22.575a24.331,24.331,0,0,1-21.07,24.079Z"
-                  transform="translate(-542.657 1431.724)"
-                  fill="currentColor"
-                />
-                <path
-                  d="M-302.513-1272.2H-400.75c-12.039,0-21.069-12.04-21.069-24.079s10.535-22.575,22.574-22.575h120.812c12.04,0,22.575,10.535,22.575,22.575a24.331,24.331,0,0,1-21.07,24.079Z"
-                  transform="translate(-625.637 1544.594)"
-                  fill="currentColor"
-                />
-                <path
-                  d="M-302.513-1272.2H-400.75c-12.039,0-21.069-12.04-21.069-24.079s10.535-22.575,22.574-22.575h120.812c12.04,0,22.575,10.535,22.575,22.575a24.331,24.331,0,0,1-21.07,24.079Z"
-                  transform="translate(-625.637 1318.853)"
-                  fill="currentColor"
-                />
-              </g>
-            </g>
-          </svg>
-        </div>
+        <section className="form-section">
+          <div className="form-wrapper">
+            <div className="progress-circle">
+              <CircularProgressbar
+                value={progress}
+                text={`${progress}%`}
+                strokeWidth={4}
+                styles={buildStyles({
+                  textColor: "var(--progress)",
+                  pathColor: "var(--progress)",
+                  trailColor: "#2c2c51",
+                  strokeLinecap: "butt",
+                  width: "200px",
+                })}
+              />
+            </div>
+            {renderForm(step)}
+          </div>
+        </section>
       </header>
     </div>
   );

@@ -1,6 +1,13 @@
 @font-face {
   font-family: "Sharpiro";
+  font-weight: bold;
   src: url("./fonts/sharpiro-bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sharpiro";
+  font-weight: normal;
+  src: url("./fonts/sharpiro-regular.otf") format("woff2");
 }
 
 :root {
@@ -19,6 +26,13 @@
   --pill-fill1: #292744;
   --grid-btn-background: transparent;
   --filter-fade: linear-gradient(180deg, rgba(22, 21, 43, 0), #16152b);
+  --progress: #5be080;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -29,6 +43,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Sharpiro", sans-serif;
+  background: var(--bg-color);
 }
 
 code {
@@ -50,47 +65,32 @@ code {
   -webkit-text-fill-color: transparent;
 }
 
-.anime {
-  .letter {
-    opacity: 0;
-    transition: all 0.3s ease-in-out;
-    color: transparent;
-    path {
-      stroke: var(--heading-color);
-      stroke-width: 2px;
-    }
-  }
-  .group {
-    color: transparent;
-    path {
-      stroke: var(--heading-color);
-      stroke-width: 2px;
-    }
-  }
-  &:hover {
-    .group {
-      transform: translateX(100%);
-    }
-    .letter {
-      opacity: 1;
-      transition-delay: 0.3s;
-    }
+.button {
+  --primary-color: #ffc3a4;
+  justify-self: center;
+  cursor: pointer;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-family: inherit;
+  -webkit-appearance: button;
+  font-size: 0.75rem;
+  border-radius: 40px;
+  padding: 1.1875rem 2.5rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--hover-text, var(--primary-color));
+  background: var(--bg, #16152b);
+  border: 2px solid var(--primary-color);
+  transition: all 0.15s ease-in;
+  user-select: none;
+}
+
+@media (hover: hover) {
+  button:hover {
+    --bg: var(--primary-color);
+    --hover-text: #16152b;
   }
 }
 
-.group {
-  transition: all 0.3s ease-in-out;
-}
-.group1 {
-  transition-delay: 0.1s;
-}
-.group2 {
-  transition-delay: 0.2s;
-}
-.group3 {
-  transition-delay: 0.3s;
-}
-
-.group4 {
-  transition-delay: 0.4s;
-}
+@import "./styles/iconTab.scss";
+@import "./styles/form.scss";
