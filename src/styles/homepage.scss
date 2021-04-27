@@ -1,0 +1,13 @@
+.hero {
+  h2 {
+    line-height: 1;
+    font-size: 60px;
+    letter-spacing: 0.05em;
+    color: var(--heading-color);
+  }
+
+  .outline {
+    -webkit-text-stroke: 1px var(--heading-color);
+    -webkit-text-fill-color: transparent;
+  }
+}

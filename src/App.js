@@ -1,4 +1,3 @@
-import "./App.scss";
 import React, { useState } from "react";
 import "react-circular-progressbar/dist/styles.css";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
