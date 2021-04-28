@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import CheckboxTab from "./checkboxTab";
 import TagLine from "./TagLine";
 import { games, categories } from "../constants";
@@ -21,6 +21,10 @@ const getImage = (name) => {
 
 const Form1 = ({ setStep, setProgress, previous, next }) => {
   const checkboxContainer = useRef([]);
+
+  useEffect(() => {
+    setProgress(previous);
+  }, []);
 
   const submitHandler = () => {
     const activeCheckboxes = checkboxContainer.current.querySelectorAll(
@@ -75,7 +79,7 @@ const Form1 = ({ setStep, setProgress, previous, next }) => {
       </div>
       <div className="buttons">
         <button className="button button--primary" onClick={submitHandler}>
-          Next
+          Continue
         </button>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import CheckboxTab from "./checkboxTab";
 import TagLine from "./TagLine";
 
@@ -11,6 +11,10 @@ const text = {
 
 const Form2 = ({ setStep, setProgress, previous, next }) => {
   const checkboxContainer = useRef([]);
+
+  useEffect(() => {
+    setProgress(previous);
+  }, []);
 
   const submitHandler = () => {
     const activeCheckboxes = checkboxContainer.current.querySelectorAll(
@@ -63,7 +67,10 @@ const Form2 = ({ setStep, setProgress, previous, next }) => {
       </div>
       <div className="buttons">
         <button className="button button--primary" onClick={submitHandler}>
-          Okrrrrr
+          Continue
+        </button>
+        <button className="button" onClick={() => setStep(1)}>
+          Go back
         </button>
       </div>
     </section>

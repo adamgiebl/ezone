@@ -8,6 +8,7 @@
   display: grid;
   align-items: center;
   justify-items: center;
+  color: white;
 }
 
 .form-wrapper {
@@ -33,6 +34,7 @@
   border: 3px solid #2c2c51;
   border-radius: 23px;
   padding: 100px 70px;
+  padding-bottom: 40px;
   position: relative;
   max-width: 800px;
   width: 100%;
@@ -72,11 +74,63 @@
     }
     .tab {
       margin-right: 15px;
-      margin-bottom: 7px;
+      margin-bottom: 8px;
+      padding: 10px 12px;
     }
   }
 
   .buttons {
     margin-top: 30px;
+
+    .button {
+      margin-right: 25px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .personal-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+
+    .form-control {
+      width: 100%;
+
+      label {
+        padding-bottom: 7px;
+        font-size: normal;
+        display: block;
+      }
+
+      input {
+        padding: 14px 20px;
+        margin-bottom: 20px;
+        font-size: 18px;
+        border-radius: 15px;
+        border: 2px solid var(--accent);
+        background: var(--bg-color);
+        color: white;
+        width: 100%;
+
+        &:focus {
+          outline: 0;
+          box-shadow: 0px 0px 0px 1px white;
+        }
+      }
+    }
+
+    .inputs {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      flex: 1;
+      padding: 20px 0;
+      width: 100%;
+    }
   }
 }

@@ -46,34 +46,25 @@ function App() {
     }
   };
   return (
-    <div className="App">
-      <header className="App-header">
-        <h2>
-          ELEVATING PERFORMANCE
-          <br />
-          <span className="outline">IN ESPORTS ATHELTES</span>
-        </h2>
-        <section className="form-section">
-          <div className="form-wrapper">
-            <div className="progress-circle">
-              <CircularProgressbar
-                value={progress}
-                text={`${progress}%`}
-                strokeWidth={4}
-                styles={buildStyles({
-                  textColor: "var(--progress)",
-                  pathColor: "var(--progress)",
-                  trailColor: "#2c2c51",
-                  strokeLinecap: "butt",
-                  width: "200px",
-                })}
-              />
-            </div>
-            {renderForm(step)}
-          </div>
-        </section>
-      </header>
-    </div>
+    <section className="form-section">
+      <div className="form-wrapper">
+        <div className="progress-circle">
+          <CircularProgressbar
+            value={progress}
+            text={`${progress}%`}
+            strokeWidth={4}
+            styles={buildStyles({
+              textColor: "var(--progress)",
+              pathColor: "var(--progress)",
+              trailColor: "#2c2c51",
+              strokeLinecap: "butt",
+              width: "200px",
+            })}
+          />
+        </div>
+        {renderForm(step)}
+      </div>
+    </section>
   );
 }
 
