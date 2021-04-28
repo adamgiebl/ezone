@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
-import CheckboxTab from "./checkboxTab";
-import TagLine from "./TagLine";
-import FormLabel from "./FormLabel";
+import CheckboxTab from "../components/CheckboxTab";
+import TagLine from "../components/TagLine";
+import FormLabel from "../components/FormLabel";
 
 import { areas, areasCategories } from "../constants";
 

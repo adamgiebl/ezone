@@ -13,7 +13,7 @@ const Homepage = () => {
   const [open, setOpen] = useState(false);
   return (
     <main>
-      {open && <App />}
+      {open && <App setOpen={setOpen} />}
 
       <header className="header">
         <img className="logo" src={logoSrc} alt="little monkey" />
