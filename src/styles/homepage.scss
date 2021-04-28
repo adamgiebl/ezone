@@ -1,13 +1,186 @@
+.header {
+  padding: 70px 70px 0;
+  display: flex;
+  justify-content: space-between;
+  .logo {
+    width: 80px;
+  }
+  span {
+    color: white;
+    font-family: "Shapiro";
+    font-weight: bold;
+    font-size: 18px;
+    .burger {
+      padding-left: 7px;
+    }
+  }
+}
+.purple-pill {
+  position: absolute;
+  top: -2px;
+  right: 0;
+  z-index: -1;
+}
+.gray-pill {
+  position: absolute;
+  top: 130vh;
+  left: 0;
+}
 .hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .astralis-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    .astralis-text {
+      padding-left: 15px;
+      display: flex;
+      flex-direction: column;
+      font-family: "Uniform";
+    }
+    .from-founders {
+      color: var(--font-color);
+
+      font-weight: normal;
+      font-size: 16px;
+    }
+    .astralis {
+      color: var(--font-color);
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
   h2 {
     line-height: 1;
-    font-size: 60px;
+    font-size: 4.375rem;
     letter-spacing: 0.05em;
     color: var(--heading-color);
+    text-align: center;
+    margin-bottom: 30px;
+
+    .outline {
+      font-size: 3.5rem;
+      -webkit-text-stroke: 1px var(--heading-color);
+      -webkit-text-fill-color: transparent;
+    }
   }
 
-  .outline {
-    -webkit-text-stroke: 1px var(--heading-color);
-    -webkit-text-fill-color: transparent;
+  .button {
+    margin-bottom: 120px;
+  }
+  .perks {
+    color: var(--font-color);
+    font-family: "Uniform";
+    span {
+      padding: 0 15px;
+    }
+  }
+}
+.performance {
+  height: 100vh;
+  padding-left: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 100px;
+  position: relative;
+  h2 {
+    max-width: 900px;
+    line-height: 1;
+    font-size: 62px;
+    letter-spacing: 0.05em;
+    color: var(--heading-color);
+    text-align: left;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+  }
+  .perks {
+    color: var(--font-color);
+    font-family: "Uniform";
+    text-transform: uppercase;
+    max-width: 650px;
+    font-size: 18px;
+  }
+  img {
+    position: absolute;
+    right: 0px;
+
+    z-index: -1;
+  }
+  margin-bottom: 200px;
+}
+
+.quote-cta {
+  margin: 200px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .quote {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--heading-color);
+    align-items: center;
+    padding: 0 90px 90px;
+    margin-right: 50px;
+    .quotation-marks {
+      width: 50px;
+      z-index: 2;
+      margin-top: -40px;
+    }
+    .frederik {
+      padding: 7px;
+      color: var(--font-color);
+      font-family: "Uniform";
+      font-size: 1.5rem;
+      text-align: center;
+      z-index: 2;
+    }
+
+    .co-founder {
+      color: var(--heading-color);
+      font-size: 14px;
+      font-family: "Shapiro";
+      font-weight: normal;
+      padding-bottom: 50px;
+      z-index: 2;
+    }
+    .square {
+      position: absolute;
+      background-color: var(--bg-color);
+      width: 200px;
+      height: 80px;
+      align-self: center;
+      top: -50px;
+    }
+    .citation {
+      padding-top: 50px;
+      color: var(--font-color);
+      font-weight: normal;
+      font-family: "Uniform";
+      text-transform: uppercase;
+      max-width: 300px;
+      text-align: center;
+    }
+  }
+  .cta {
+    padding: 20px;
+    h2 {
+      max-width: 550px;
+      line-height: 1;
+      font-size: 62px;
+      letter-spacing: 0.05em;
+      color: var(--heading-color);
+      text-align: left;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
   }
 }

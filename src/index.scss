@@ -5,15 +5,25 @@
 }
 
 @font-face {
-  font-family: "Sharpiro";
+  font-family: "Shapiro";
   font-weight: bold;
   src: url("./fonts/sharpiro-bold.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: "Sharpiro";
+  font-family: "Shapiro";
   font-weight: normal;
-  src: url("./fonts/sharpiro-regular.otf") format("woff2");
+  src: url("./fonts/sharpiro-regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Uniform";
+  font-weight: bold;
+  src: url("./fonts/uniform-pro-con-black.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Uniform";
+  font-weight: normal;
+  src: url("./fonts/uniform-pro-con-medium.woff2") format("woff2");
 }
 
 :root {
@@ -42,7 +52,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Sharpiro", sans-serif;
+  font-family: "Uniform", sans-serif;
   background: var(--bg-color);
 }
 
