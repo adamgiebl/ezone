@@ -1,7 +1,10 @@
 .header {
   padding: 70px 70px 0;
+  position: fixed;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
   .logo {
     width: 80px;
   }
@@ -15,6 +18,15 @@
     }
   }
 }
+
+.rec {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 600px;
+  height: 400px;
+  background: blue;
+}
 .purple-pill {
   position: absolute;
   top: -2px;
@@ -23,11 +35,12 @@
 }
 .gray-pill {
   position: absolute;
-  top: 130vh;
+  bottom: -279px;
   left: 0;
 }
 .hero {
   height: 100vh;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -82,13 +95,14 @@
   }
 }
 .performance {
-  height: 100vh;
-  padding-left: 100px;
+  height: 600px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   margin-top: 100px;
+  margin: auto;
+  max-width: 1200px;
   position: relative;
   h2 {
     max-width: 900px;
@@ -121,6 +135,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: center;
 
   .quote {
     position: relative;
@@ -161,7 +176,6 @@
       top: -50px;
     }
     .citation {
-      padding-top: 50px;
       color: var(--font-color);
       font-weight: normal;
       font-family: "Uniform";

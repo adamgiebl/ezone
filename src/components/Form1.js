@@ -78,7 +78,10 @@ const Form1 = ({ setStep, setProgress, previous, next }) => {
         </div>
       </div>
       <div className="buttons">
-        <button className="button button--primary" onClick={submitHandler}>
+        <button className="button button--link" onClick={() => setStep(0)}>
+          Go back
+        </button>
+        <button className="button" onClick={submitHandler}>
           Continue
         </button>
       </div>

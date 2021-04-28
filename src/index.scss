@@ -52,7 +52,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Uniform", sans-serif;
+  font-family: "Shapiro", sans-serif;
   background: var(--bg-color);
 }
 
@@ -84,6 +84,15 @@ body {
     background: var(--accent);
     color: var(--bg-color);
     border-color: var(--accent);
+  }
+
+  &--link {
+    color: white;
+    border-color: transparent;
+
+    &:hover {
+      background: #262744;
+    }
   }
 }
 

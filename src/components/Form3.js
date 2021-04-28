@@ -31,11 +31,11 @@ const Form3 = ({ setStep, setProgress, previous, next }) => {
             <ValidatedInput label={"Email"} name={"email"} type={"email"} />
           </div>
           <div className="buttons">
-            <button className="button button--primary" type="submit">
-              Sign up
-            </button>
-            <button className="button" onClick={() => setStep(2)}>
+            <button className="button button--link" onClick={() => setStep(2)}>
               Go back
+            </button>
+            <button className="button" type="submit">
+              Sign up
             </button>
           </div>
         </form>

@@ -34,7 +34,6 @@ export const areas = [
   { name: "Physiology", category: "OFF-GAME" },
   { name: "Sleep", category: "OFF-GAME" },
   { name: "Stress", category: "OFF-GAME" },
-  { name: "Tactical", category: "IN-GAME" },
   { name: "Strategy", category: "IN-GAME" },
   { name: "Leadership", category: "IN-GAME" },
 ];

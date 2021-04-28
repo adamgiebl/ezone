@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import logoSrc from "./images/ezone-logo.svg";
 import burgerSrc from "./images/burger.svg";
 import astralisSrc from "./images/astralis.svg";
@@ -6,9 +7,14 @@ import arenaSrc from "./images/arena.png";
 import pillSrc from "./images/pills.svg";
 import pillgSrc from "./images/pillsgray.svg";
 import quoteSrc from "./images/quotes.svg";
+import App from "./App";
+
 const Homepage = () => {
+  const [open, setOpen] = useState(false);
   return (
     <main>
+      {open && <App />}
+
       <header className="header">
         <img className="logo" src={logoSrc} alt="little monkey" />
         <span>
@@ -16,9 +22,10 @@ const Homepage = () => {
           <img className="burger" src={burgerSrc} alt="burger menu" />
         </span>
       </header>
-      <img className="purple-pill" src={pillSrc} alt="outlined pills" />
-      <img className="gray-pill" src={pillgSrc} alt="outlined pills" />
+
       <section className="hero">
+        <img className="purple-pill" src={pillSrc} alt="outlined pills" />
+        <img className="gray-pill" src={pillgSrc} alt="outlined pills" />
         <div className="astralis-container">
           <img src={astralisSrc} alt="logo of Astralis, a CS:Go team" />
           <h3 className="astralis-text">
@@ -34,7 +41,10 @@ const Homepage = () => {
           <br />
           <span>PERFORMANCE</span>
         </h2>
-        <button className="button">GET IN THE ZONE</button>
+        <button className="button" onClick={() => setOpen(true)}>
+          GET IN THE ZONE
+        </button>
+
         <span className="perks">
           FREE-TO-USE<span>|</span>CURATED CONTENT<span>|</span>
           NO-STRINGS-ATTACHED
@@ -71,7 +81,9 @@ const Homepage = () => {
         </div>
         <div className="cta">
           <h2>Elevate and level up your game, off the server!</h2>
-          <button className="button">Get in the zone</button>
+          <Link to="/ezone/zone">
+            <button className="button">Get in the zone</button>
+          </Link>
         </div>
       </section>
     </main>
