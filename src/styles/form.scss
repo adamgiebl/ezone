@@ -55,6 +55,7 @@
   display: flex;
   flex-direction: column;
   background: var(--bg-color);
+  box-shadow: 0 30px 90px 0px rgba(0, 0, 0, 0.58);
 
   .games {
     display: grid;
@@ -195,5 +196,43 @@
   cursor: pointer;
   svg {
     width: 15px;
+  }
+}
+
+.rect1 {
+  width: 370px;
+  height: 200px;
+  left: -170px;
+  top: -100px;
+  z-index: -1;
+  position: absolute;
+  background: var(--heading-color-animate);
+  animation: comeIn1 0.5s ease-in-out;
+  //animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.rect2 {
+  width: 300px;
+  height: 400px;
+  right: -170px;
+  bottom: -100px;
+  z-index: -1;
+  position: absolute;
+  background: var(--heading-color-animate);
+  animation: comeIn2 0.7s ease-in-out;
+  //animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes comeIn1 {
+  from {
+    transform: scale(0.6) translate(200px, 200px);
+  }
+}
+
+@keyframes comeIn2 {
+  from {
+    transform: scale(0.6) translate(-200px, -200px);
   }
 }

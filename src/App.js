@@ -73,6 +73,8 @@ function App({ setOpen }) {
   return (
     <section className="form-section">
       <div className="form-wrapper">
+        <div className="rect1"></div>
+        <div className="rect2"></div>
         <button className="button-close" onClick={() => setOpen(false)}>
           <svg version="1.1" id="Layer_1" viewBox="0 0 492 492">
             <g>
