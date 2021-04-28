@@ -8,13 +8,13 @@ const FormEnd = ({ setStep, setProgress, previous, next }) => {
     <section className="form formEnd">
       <div className="content">
         <h2>
-          <span className="outline">Welcome to</span>
+          <span className="outline"></span>
           <br />
-          <span>The Zone</span>
+          <span>Congrats!</span>
         </h2>
         <span className="instructions">
-          Let us help you improve your performance with personalized content
-          sent to your inbox
+          Welcome to Ezone. You are now a member and will receive expert news
+          based on your chosen areas of performance.
         </span>
       </div>
       <div
@@ -24,7 +24,7 @@ const FormEnd = ({ setStep, setProgress, previous, next }) => {
         style={{ justifyContent: "center", marginTop: "2rem" }}
       >
         <button className="button" onClick={() => setStep(1)}>
-          Continue
+          Finish
         </button>
       </div>
     </section>
