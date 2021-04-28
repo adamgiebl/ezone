@@ -36,7 +36,7 @@ const Form3 = ({ setStep, setProgress, previous, next }) => {
             <button className="button button--link" onClick={() => setStep(2)}>
               Go back
             </button>
-            <button className="button" type="submit">
+            <button className="button" type="submit" onClick={() => setStep(3)}>
               Sign up
             </button>
           </div>

@@ -5,6 +5,7 @@ import Form0 from "./form-steps/Form0";
 import Form1 from "./form-steps/Form1";
 import Form2 from "./form-steps/Form2";
 import Form3 from "./form-steps/Form3";
+import FormEnd from "./form-steps/FormEnd";
 
 function App({ setOpen }) {
   const [step, setStep] = useState(0);
@@ -43,6 +44,15 @@ function App({ setOpen }) {
       case 3:
         return (
           <Form3
+            setStep={setStep}
+            setProgress={setProgress}
+            previous={50}
+            next={100}
+          />
+        );
+      case 4:
+        return (
+          <FormEnd
             setStep={setStep}
             setProgress={setProgress}
             previous={50}
