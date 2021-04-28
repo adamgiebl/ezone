@@ -19,14 +19,6 @@
   }
 }
 
-.rec {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  width: 600px;
-  height: 400px;
-  background: blue;
-}
 .purple-pill {
   position: absolute;
   top: -2px;
@@ -75,7 +67,6 @@
     color: var(--heading-color);
     text-align: center;
     margin-bottom: 30px;
-
     .outline {
       font-size: 3.5rem;
       -webkit-text-stroke: 1px var(--heading-color);

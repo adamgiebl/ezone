@@ -81,7 +81,6 @@ function App() {
         </div>
         {renderForm(step)}
       </div>
-      <div className="rec"></div>
     </section>
   );
 }
