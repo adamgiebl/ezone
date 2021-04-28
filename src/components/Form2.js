@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import CheckboxTab from "./checkboxTab";
 import TagLine from "./TagLine";
+import FormLabel from "./FormLabel";
 
 import { areas, areasCategories } from "../constants";
 
@@ -41,6 +42,7 @@ const Form2 = ({ setStep, setProgress, previous, next }) => {
   };
   return (
     <section className="form form2">
+      <FormLabel text={"AREAS OF PERFORMANCE"} number={"02."} />
       <div className="content">
         <TagLine heading={text.heading} subHeading={text.subHeading} />
         <div className="areas" ref={checkboxContainer}>

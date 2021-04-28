@@ -6,8 +6,6 @@ import Form1 from "./components/Form1";
 import Form2 from "./components/Form2";
 import Form3 from "./components/Form3";
 
-//import csgoSrc from "./images/games/csgo.png";
-
 function App() {
   const [step, setStep] = useState(0);
   const [progress, setProgress] = useState(0);
@@ -81,7 +79,6 @@ function App() {
         </div>
         {renderForm(step)}
       </div>
-      <div className="rec"></div>
     </section>
   );
 }

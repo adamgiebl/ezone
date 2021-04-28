@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import TagLine from "./TagLine";
 import ValidatedInput from "./ValidatedInput";
+import FormLabel from "./FormLabel";
 
 const text = {
   heading: "Elevate your performance",
@@ -19,6 +20,7 @@ const Form3 = ({ setStep, setProgress, previous, next }) => {
 
   return (
     <section className="form form3">
+      <FormLabel text={"AREAS OF PERFORMANCE"} number={"02."} />
       <div className="content">
         <form className="personal-form" onSubmit={handleSubmit}>
           <TagLine heading={text.heading} subHeading={text.subHeading} />

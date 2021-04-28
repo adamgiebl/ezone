@@ -122,6 +122,31 @@ body {
   }
 }
 
+.form-label {
+  font-family: "Uniform";
+  position: absolute;
+  top: -2.5rem;
+  left: 0;
+  font-size: 1.2rem;
+  animation: comeUp 0.3s ease-in-out;
+  z-index: -1;
+  .number {
+    color: var(--accent);
+  }
+  .text {
+    color: white;
+  }
+}
+
+@keyframes comeUp {
+  from {
+    transform: translateY(50px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
 @import "./styles/homepage.scss";
 @import "./styles/iconTab.scss";
 @import "./styles/form.scss";
